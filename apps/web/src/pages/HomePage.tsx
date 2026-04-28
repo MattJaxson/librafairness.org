@@ -1,52 +1,18 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SectionLabel, Window } from "../components/Chrome";
-import { PublicStats, api } from "../lib/api";
 
-const defaultStats: PublicStats = {
-  total_analyses: 0,
-  total_users: 0,
-  total_communities: 0,
-  total_pageviews: 0,
-};
-
-const STAT_TRENDS: Record<string, string> = {
-  total_analyses: "+12 / 30d",
-  total_users: "+7 / 30d",
-  total_communities: "+2 / 30d",
-  total_pageviews: "+1.2k / 30d",
-};
+const recordItems = [
+  ["01", "Community fairness standard", "The public rule the community wants vendors measured against."],
+  ["02", "Signed governance receipt", "A tamper-evident proof of what standard was recorded."],
+  ["03", "Public registry record", "A citeable page that keeps the standard visible for review."],
+  ["04", "Vendor evidence check", "A sample way to compare vendor evidence with the published standard."],
+] as const;
 
 export function HomePage() {
-  const [stats, setStats] = useState(defaultStats);
-  const [runtimeWarning, setRuntimeWarning] = useState("");
-
-  useEffect(() => {
-    api
-      .getPublicStats()
-      .then((response) => {
-        setStats(response);
-        setRuntimeWarning("");
-      })
-      .catch(() => {
-        setRuntimeWarning(
-          "Live API stats are unavailable right now. This page is still accurate about the workflow, but the counters below may not reflect current backend state.",
-        );
-      });
-  }, []);
-
-  const statRows: Array<[number, string, string]> = [
-    [stats.total_analyses, "Analyses", STAT_TRENDS.total_analyses],
-    [stats.total_users, "Users", STAT_TRENDS.total_users],
-    [stats.total_communities, "Governed Standards", STAT_TRENDS.total_communities],
-    [stats.total_pageviews, "Pageviews", STAT_TRENDS.total_pageviews],
-  ];
-
   return (
     <>
       <div className="dark-hero">
         <div className="desktop">
-          {runtimeWarning ? <div className="notice-banner warning-banner">{runtimeWarning}</div> : null}
           <section className="hero-stage hero-stage-dark">
             <div className="hero-copy">
               <div className="eyebrow">Community-Governed AI Fairness</div>
@@ -176,18 +142,13 @@ export function HomePage() {
           </Window>
         </div>
 
-        <div className="stat-strip stat-strip-upgraded">
-          {statRows.map(([num, lbl, trend]) => (
-            <div className="stat" key={lbl}>
-              <div className="stat-row">
-                <div className="stat-num">{num}</div>
-                <span className="stat-trend">
-                  <span className="stat-trend-arrow">▲</span>
-                  {trend.replace("+", "").split(" ")[0]}
-                </span>
-              </div>
-              <div className="stat-lbl">{lbl}</div>
-              <div className="stat-trend-foot">{trend} · trailing</div>
+        <SectionLabel>What Libra Records</SectionLabel>
+        <div className="stat-strip stat-strip-upgraded record-strip">
+          {recordItems.map(([number, label, detail]) => (
+            <div className="stat record-stat" key={label}>
+              <div className="stat-num">{number}</div>
+              <div className="stat-lbl">{label}</div>
+              <div className="stat-trend-foot">{detail}</div>
             </div>
           ))}
         </div>

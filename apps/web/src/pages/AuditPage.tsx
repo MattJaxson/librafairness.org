@@ -231,8 +231,9 @@ export function AuditPage() {
           <div className="eyebrow">Audit and Vendor Check</div>
           <h1>Run bias audits and check vendor evidence.</h1>
           <p className="lede">
-            This route keeps the live functionality intact: JSON audit, CSV audit/remediation,
-            regulation report generation, and registry-bound vendor evidence checks.
+            This route shows how evidence would be checked against a published community standard.
+            In the static review build, vendor evidence checks are sample/demo artifacts unless a
+            real standard and live submission process are connected.
           </p>
         </section>
 

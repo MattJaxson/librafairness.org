@@ -63,12 +63,12 @@ export function DashboardPage() {
     <>
       <div className="desktop">
         <section className="page-head">
-          <div className="eyebrow">Founder Dashboard</div>
+          <div className="eyebrow">Demo System State</div>
           <h1>Governance state, vendor checks, and audit history.</h1>
           <p className="lede">
-            This view stays grounded in what is actually live: active standard state, stale or
-            warning conditions, recent vendor evidence checks, and the audit outputs already stored
-            by the platform.
+            This view is an inspection panel for the demo runtime: active standard state, stale or
+            warning conditions, sample vendor evidence checks, and stored audit outputs. It is not a
+            public adoption dashboard.
           </p>
         </section>
 
@@ -81,15 +81,15 @@ export function DashboardPage() {
         <div className="stat-strip">
           <div className="stat">
             <div className="stat-num">{stats.total_analyses}</div>
-            <div className="stat-lbl">Analyses</div>
+            <div className="stat-lbl">Demo Analyses</div>
           </div>
           <div className="stat">
             <div className="stat-num">{stats.total_users}</div>
-            <div className="stat-lbl">Users</div>
+            <div className="stat-lbl">Demo Users</div>
           </div>
           <div className="stat">
             <div className="stat-num">{stats.total_communities}</div>
-            <div className="stat-lbl">Active Standards</div>
+            <div className="stat-lbl">Demo Standards</div>
           </div>
           <div className="stat" style={{ fontSize: "14px" }}>
             <div className="stat-num" style={{ fontSize: "28px" }}>
