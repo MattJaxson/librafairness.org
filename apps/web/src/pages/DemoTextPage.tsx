@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { JsonBlock, Marquee, SectionLabel, Window } from "../components/Chrome";
+import { JsonBlock, SectionLabel, Window } from "../components/Chrome";
 import { api } from "../lib/api";
 
 export function DemoTextPage() {
@@ -22,13 +22,6 @@ export function DemoTextPage() {
 
   return (
     <>
-      <Marquee
-        items={[
-          "<b>TEXT DEMO</b> · deterministic analysis endpoint",
-          "Uses the unauthenticated demo route",
-          "No District 3 receipt is implied here",
-        ]}
-      />
       <div className="desktop">
         <section className="page-head">
           <div className="eyebrow">Secondary Workflow</div>

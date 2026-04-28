@@ -6,7 +6,7 @@ import {
   PublishedStandardDetail,
   ReceiptVerifyResponse,
 } from "../lib/api";
-import { JsonBlock, Marquee, SectionLabel, Window } from "../components/Chrome";
+import { JsonBlock, SectionLabel, Window } from "../components/Chrome";
 
 function standardRows(active: ActiveStandardResponse | null) {
   const config = active?.config;
@@ -72,14 +72,6 @@ export function CommunityPage() {
 
   return (
     <>
-      <Marquee
-        items={[
-          "<b>COMMUNITY</b> · fairness is a governance decision, not a vendor default",
-          "The session creates the standard · finalization makes it live",
-          "Receipts can be verified with the public key",
-          "District 3 stays planned until the actual resident session happens",
-        ]}
-      />
       <div className="desktop">
         <section className="editorial-hero">
           <div className="eyebrow">CDF v1 · Community-Defined Fairness</div>

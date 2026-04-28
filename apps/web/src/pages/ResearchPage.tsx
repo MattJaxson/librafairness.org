@@ -1,15 +1,8 @@
-import { Marquee, SectionLabel, Window } from "../components/Chrome";
+import { SectionLabel, Window } from "../components/Chrome";
 
 export function ResearchPage() {
   return (
     <>
-      <Marquee
-        items={[
-          "<b>RESEARCH</b> · HMDA · COMPAS · HR validation base",
-          "Threshold sensitivity is the empirical argument behind governance",
-          "Michigan finding: the same data can flip depending on who sets the threshold",
-        ]}
-      />
       <div className="desktop">
         <section className="page-head">
           <div className="eyebrow">Research Base</div>
@@ -27,6 +20,30 @@ export function ResearchPage() {
             EEOC threshold that a stricter community-defined floor can convert a technical pass into
             a fail. That is why community input changes outcomes rather than merely changing language.
           </p>
+        </Window>
+
+        <SectionLabel>Related Registry Models</SectionLabel>
+        <Window title="Public Accountability Registries">
+          <div className="story-grid">
+            <p>
+              The{" "}
+              <a href="https://ai.hel.fi/en/ai-register/" target="_blank" rel="noreferrer">
+                Helsinki AI Register
+              </a>{" "}
+              and the{" "}
+              <a href="https://algoritmes.overheid.nl/en" target="_blank" rel="noreferrer">
+                Dutch Algorithm Register
+              </a>{" "}
+              show how public institutions can disclose where AI and algorithmic systems are being
+              used, what they do, and how the public can learn about them.
+            </p>
+            <p>
+              Libra is complementary to those registries. It does not try to replace public AI
+              disclosure. It focuses on the earlier governance question: who set the fairness
+              threshold, what evidence did the vendor submit, and can the public trace that chain
+              from community standard to registry record?
+            </p>
+          </div>
         </Window>
 
         <SectionLabel>Project Code</SectionLabel>

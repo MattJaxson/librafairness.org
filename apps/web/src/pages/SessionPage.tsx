@@ -10,7 +10,7 @@ import {
   ObserverAttestationRequest,
   ProcessIntegrityResponse,
 } from "../lib/api";
-import { JsonBlock, Marquee, SectionLabel, SessionStepFlow, Window } from "../components/Chrome";
+import { JsonBlock, SectionLabel, SessionStepFlow, Window } from "../components/Chrome";
 
 type SessionForm = {
   council_label: string;
@@ -240,14 +240,6 @@ export function SessionPage() {
 
   return (
     <>
-      <Marquee
-        items={[
-          "<b>SESSION</b> · draft -> finalize -> active standard",
-          "Drafts never create official receipts",
-          "The sample preset is explicitly demo/sample only",
-          "District 3 stays planned until the real session actually happens",
-        ]}
-      />
       <div className="desktop">
         <section className="page-head">
           <div className="eyebrow">Facilitator Flow</div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { JsonBlock, Marquee, SectionLabel, Window } from "../components/Chrome";
+import { JsonBlock, SectionLabel, Window } from "../components/Chrome";
 import {
   ActiveStandardResponse,
   GovernanceStatusResponse,
@@ -61,13 +61,6 @@ export function DashboardPage() {
 
   return (
     <>
-      <Marquee
-        items={[
-          "<b>DASHBOARD</b> · public stats + governance state",
-          "Live governed community count only includes finalized standards",
-          "Planned pilots do not inflate production metrics",
-        ]}
-      />
       <div className="desktop">
         <section className="page-head">
           <div className="eyebrow">Founder Dashboard</div>

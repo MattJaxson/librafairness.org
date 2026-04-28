@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { JsonBlock, Marquee, SectionLabel, Window } from "../components/Chrome";
+import { JsonBlock, SectionLabel, Window } from "../components/Chrome";
 import { api, BensonPacketResponse } from "../lib/api";
 
 const endpoints = [
@@ -62,14 +62,6 @@ export function DocsPage() {
 
   return (
     <>
-      <Marquee
-        items={[
-          "<b>DOCS</b> · live API routes and governance rules",
-          "Finalize is the only path that creates a governed receipt",
-          "Drafts are visible and non-governing",
-          "Published standards come from manual publish after finalization",
-        ]}
-      />
       <div className="desktop">
         <section className="page-head">
           <div className="eyebrow">Live API Surface</div>

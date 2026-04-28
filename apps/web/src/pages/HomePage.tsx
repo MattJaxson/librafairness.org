@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Marquee, SectionLabel, Window } from "../components/Chrome";
+import { SectionLabel, Window } from "../components/Chrome";
 import { PublicStats, api } from "../lib/api";
 
 const defaultStats: PublicStats = {
@@ -44,15 +44,6 @@ export function HomePage() {
 
   return (
     <>
-      <Marquee
-        darker
-        items={[
-          "<b>LIBRA</b> · community-governed fairness and audit platform",
-          "District 3 remains the planned first live Emily session — not a completed case study",
-          "Demo/sample workflow is live now: finalize, sign, publish, verify, vendor-check",
-          "Public registry, appendix PDF, and signed receipt verification are all live",
-        ]}
-      />
       <div className="dark-hero">
         <div className="desktop">
           {runtimeWarning ? <div className="notice-banner warning-banner">{runtimeWarning}</div> : null}
@@ -70,21 +61,20 @@ export function HomePage() {
                 <span className="hero-rule-line" />
               </div>
               <p className="lede">
-                Libra turns community-defined fairness from a research claim into a working founder
-                workflow: sample standard created, standard finalized, signed receipt generated,
-                public record published, vendor evidence checked, and a contract appendix prepared
-                for procurement drafting and review.
+                Libra is a public record system for AI fairness decisions. It helps a community
+                choose what “fair enough” should mean, records that choice, and checks vendor
+                evidence against it before the result is treated as trustworthy.
               </p>
               <div className="btn-row hero-btn-row">
-                <Link className="btn btn-primary btn-strong" to="/session">
-                  Open Session Flow
+                <a className="btn btn-primary btn-strong" href="#what-is-libra">
+                  Start With the Story
                   <span className="btn-arrow">→</span>
-                </Link>
+                </a>
                 <Link className="btn btn-on-dark" to="/community">
-                  Read the Governance Model
+                  See the Governance Model
                 </Link>
                 <Link className="btn btn-on-dark" to="/audit">
-                  Run an Audit
+                  Check Vendor Evidence
                 </Link>
               </div>
               <div className="hero-meta">
@@ -120,6 +110,72 @@ export function HomePage() {
       </div>
 
       <div className="desktop">
+        <SectionLabel>What Is Libra?</SectionLabel>
+        <Window title="Plain-Language Background" className="clarity-window" >
+          <div id="what-is-libra" className="story-grid">
+            <p>
+              Cities are starting to use AI systems in public services: voice agents, screening
+              tools, routing systems, scoring models, and other automated helpers. These systems
+              can work well for some residents and worse for others.
+            </p>
+            <p>
+              The important question is not only whether a system is accurate. It is who gets to
+              decide the fairness standard before a vendor claims the system is acceptable. Libra
+              makes that decision visible as a public record.
+            </p>
+          </div>
+        </Window>
+
+        <div className="grid-two">
+          <Window title="The Old Way">
+            <p>
+              A vendor, researcher, or default rule often defines the fairness threshold privately.
+              Residents may only see a finished claim: the system passed, failed, or needs review.
+            </p>
+          </Window>
+          <Window title="What Libra Changes">
+            <p>
+              Libra starts with the affected community. The community standard is drafted,
+              finalized, signed, published, and then used to check vendor evidence.
+            </p>
+          </Window>
+        </div>
+
+        <SectionLabel>Human Entry Point</SectionLabel>
+        <Window title="Start With a Resident Concern">
+          <div className="story-grid">
+            <p>
+              Imagine a city uses an AI voice agent to answer resident calls. Residents may worry
+              that it understands some accents, dialects, or speech patterns better than others.
+            </p>
+            <p>
+              Libra’s demo asks: before the vendor is evaluated, what fairness floor should the
+              community require? The current District 3 / Emily material is only a session example;
+              the real resident session has not happened yet.
+            </p>
+          </div>
+        </Window>
+
+        <SectionLabel>What the Demo Is Showing</SectionLabel>
+        <div className="grid-two">
+          <Window title="What You Can Inspect">
+            <ol className="stack-list">
+              <li>A sample community standard.</li>
+              <li>A draft-to-finalize workflow for approving that standard.</li>
+              <li>A signed receipt proving what standard was recorded.</li>
+              <li>A public registry entry that others can cite.</li>
+              <li>A vendor evidence check against the published standard.</li>
+            </ol>
+          </Window>
+          <Window title="What It Is Not Claiming">
+            <ol className="stack-list">
+              <li>It is not claiming a real District 3 resident decision yet.</li>
+              <li>It is not official city branding or a completed public outcome.</li>
+              <li>It is a working demo of the governance mechanism before a real session.</li>
+            </ol>
+          </Window>
+        </div>
+
         <div className="stat-strip stat-strip-upgraded">
           {statRows.map(([num, lbl, trend]) => (
             <div className="stat" key={lbl}>
@@ -138,7 +194,7 @@ export function HomePage() {
 
         <SectionLabel>What Ships Now</SectionLabel>
         <div className="grid-two">
-          <Window title="Founder Workflow">
+          <Window title="Governance Workflow">
             <ol className="stack-list">
               <li>Load a sample community standard and save a draft.</li>
               <li>Finalize the standard into the active governed configuration.</li>

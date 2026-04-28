@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { api, PublishedStandardDetail, PublishedStandardSummary } from "../lib/api";
-import { JsonBlock, Marquee, SectionLabel, Window } from "../components/Chrome";
+import { JsonBlock, SectionLabel, Window } from "../components/Chrome";
 import { STATIC_PREVIEW } from "../lib/runtime";
 
 function detailRows(detail: PublishedStandardDetail | null) {
@@ -49,14 +49,6 @@ export function RegistryPage() {
 
   return (
     <>
-      <Marquee
-        items={[
-          "<b>REGISTRY</b> · published community standards",
-          "Receipts and signature status stay attached to each public record",
-          "Demo records stay clearly labeled as sample artifacts",
-          "Appendix PDFs can be downloaded from the public standard detail view",
-        ]}
-      />
       <div className="desktop">
         <section className="page-head">
           <div className="eyebrow">Public Registry</div>

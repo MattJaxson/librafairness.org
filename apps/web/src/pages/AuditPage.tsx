@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { JsonBlock, Marquee, SectionLabel, Window } from "../components/Chrome";
+import { JsonBlock, SectionLabel, Window } from "../components/Chrome";
 import {
   api,
   buildVendorEvidencePackage,
@@ -226,13 +226,6 @@ export function AuditPage() {
 
   return (
     <>
-      <Marquee
-        items={[
-          "<b>AUDIT</b> · upload CSVs and compare outcomes",
-          "Audits use the active finalized standard when it exists",
-          "Vendor checks can target a published community standard directly",
-        ]}
-      />
       <div className="desktop">
         <section className="page-head">
           <div className="eyebrow">Audit and Vendor Check</div>

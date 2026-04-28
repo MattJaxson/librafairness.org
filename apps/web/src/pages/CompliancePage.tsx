@@ -1,4 +1,4 @@
-import { Marquee, SectionLabel, Window } from "../components/Chrome";
+import { SectionLabel, Window } from "../components/Chrome";
 
 const CROSSWALK = [
   {
@@ -88,13 +88,6 @@ const LIBRA_ANSWERS = [
 export function CompliancePage() {
   return (
     <>
-      <Marquee
-        items={[
-          "<b>COMPLIANCE</b> · NIST AI RMF crosswalk and procurement tools",
-          "Maps Libra features to GOVERN / MAP / MEASURE / MANAGE",
-          "Buyer packet and procurement checklist for city procurement officers",
-        ]}
-      />
       <div className="desktop">
         <section className="page-head">
           <div className="eyebrow">Compliance and Procurement</div>
