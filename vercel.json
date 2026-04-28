@@ -1,0 +1,10 @@
+{
+  "buildCommand": "npm run build:web:static-preview",
+  "outputDirectory": "apps/web/dist-static-preview",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "libra.vef.v1",
+  "standard_slug": "demo-detroit-district-3-emily-v0",
+  "vendor_name": "Demo Emily Voice Vendor",
+  "system_name": "Emily",
+  "system_version": "emily-2.1",
+  "reporting_period": "2026-Q2",
+  "protected_attribute": "speech_variety",
+  "priority_groups": [
+    "AAVE"
+  ],
+  "reference_group": "General American English",
+  "outcome_columns": [
+    "resolution_success"
+  ],
+  "sample_method": "demo_production_logs_with_human_review",
+  "raw_audio_retained": false,
+  "evidence_tier": "output_logs_only",
+  "evidence_csv_hash": "sha256:71f67ef914cbe3c5dc6c07e3b3479e0f89d7bf1c94a0fae0b9e286754c8dd7d1",
+  "evidence_package_hash": "sha256:905c397449b5a133b488c2cfc62e881c40158da2adbbd34bd61e9dec9af89bc3",
+  "demo_notice": "Demo baseline for Benson/District 3 planning only; no real resident session has occurred."
+}

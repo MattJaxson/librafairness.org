@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build:web:static-preview"
+  publish = "apps/web/dist-static-preview"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

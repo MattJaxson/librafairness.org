@@ -1,0 +1,25 @@
+{
+  "attestations": [
+    {
+      "type": "vendor_log",
+      "signed_hash": "sha256:71f67ef914cbe3c5dc6c07e3b3479e0f89d7bf1c94a0fae0b9e286754c8dd7d1",
+      "signature_key_id": "378c5aaf6f88d90d",
+      "signature_alg": "Ed25519",
+      "signature": "tEDWM+PT9WpfvB26QEi/jJXk0ReTZNpqS4rkqJM3qz+xbyKxK+t+IpUEB0yYGBMFs8a6TR/5T263LPlsyKVxAA=="
+    },
+    {
+      "type": "labeler_sample",
+      "signed_hash": "sha256:71f67ef914cbe3c5dc6c07e3b3479e0f89d7bf1c94a0fae0b9e286754c8dd7d1",
+      "signature_key_id": "dece178da2a40ee7",
+      "signature_alg": "Ed25519",
+      "signature": "a2Kv6+qA2NU2M34SWs+Dx1jrxVPqC+hY6PGbOeMOsGSrf/iCVeXymb+JoZFncGV+Am1fzuYT3LbbkufjFGckDg=="
+    },
+    {
+      "type": "municipal_sample",
+      "signed_hash": "sha256:71f67ef914cbe3c5dc6c07e3b3479e0f89d7bf1c94a0fae0b9e286754c8dd7d1",
+      "signature_key_id": "053bac2201292b3e",
+      "signature_alg": "Ed25519",
+      "signature": "+0c29UwAv3QKUKsxaFzLb5tFN5xU6IsL/wllRYT0+qtR6EKUXuUwFVaIw2Oq7oUp64wV2kn4zEPdOJi477ZhCQ=="
+    }
+  ]
+}

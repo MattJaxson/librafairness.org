@@ -1,0 +1,23 @@
+{
+  "static_preview_note": "This file is bundled for the static Libra demo so documentation links work without a live backend.",
+  "status": "demo_sample_only",
+  "district_3_emily_session": "not_yet_conducted",
+  "public_registry_contains": [
+    "Hashes",
+    "Aggregate verdicts",
+    "Attestor key IDs and roles",
+    "Cure-brief deficiencies"
+  ],
+  "public_registry_excludes": [
+    "Raw resident audio",
+    "Raw resident transcripts",
+    "Searchable resident statements",
+    "Vendor model weights or training data unless separately authorized"
+  ],
+  "artifacts": {
+    "markdown_packet": "/api/v1/registry/demo/vef/benson-packet.md",
+    "manifest_json": "/api/v1/registry/demo/vef/manifest.json",
+    "evidence_csv": "/api/v1/registry/demo/vef/evidence.csv",
+    "attestations_json": "/api/v1/registry/demo/vef/attestations.json"
+  }
+}

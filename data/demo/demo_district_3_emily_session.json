@@ -1,0 +1,32 @@
+{
+  "council_label": "Demo Baseline District 3 Emily Voice Agent",
+  "priority_groups": ["AAVE"],
+  "fairness_target": "General American English",
+  "fairness_threshold": 0.9,
+  "evidence_requirements": {
+    "minimum_evidence_tier": "validation_test"
+  },
+  "attestor_policy": {
+    "allow_demo_attestors": true,
+    "trusted_key_ids": {
+      "vendor_log": ["378c5aaf6f88d90d"],
+      "labeler_sample": ["dece178da2a40ee7"],
+      "municipal_sample": ["053bac2201292b3e"]
+    }
+  },
+  "domain": "voice_agent",
+  "jurisdiction": "Detroit District 3",
+  "is_demo": true,
+  "input_protocol": "community_session",
+  "input_location": "Detroit, MI",
+  "participant_count": 12,
+  "facilitator": "Matt Jackson",
+  "notes": "Demo sample only. The District 3 Emily session has not yet been held.",
+  "demographic_summary": {
+    "majority_race": "Black",
+    "majority_race_pct": 75.0,
+    "median_age": 42,
+    "additional": {}
+  },
+  "consensus_summary": "Sample participants want Emily to recognize and route Black Detroit residents, including Black American English speakers, as reliably as everyone else."
+}

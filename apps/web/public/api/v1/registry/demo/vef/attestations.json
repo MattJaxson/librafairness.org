@@ -1,0 +1,10 @@
+{
+  "status": "demo_sample_only",
+  "attestations": [
+    {
+      "role": "municipal_sample",
+      "key_id": "053bac2201292b3e",
+      "signature_status": "demo_only"
+    }
+  ]
+}

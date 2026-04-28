@@ -1,0 +1,10 @@
+{
+  "schema": "libra.vef.demo.v1",
+  "status": "demo_sample_only",
+  "jurisdiction": "Detroit District 3",
+  "subject": "Emily AI voice agent",
+  "resident_session": "not_yet_conducted",
+  "evidence_tier": "output_logs_only",
+  "threshold": "0.90 disparate impact ratio",
+  "hash_algorithm": "sha256"
+}
