@@ -8,6 +8,7 @@ import { CommunityPage } from "./pages/CommunityPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { DemoTextPage } from "./pages/DemoTextPage";
 import { DocsPage } from "./pages/DocsPage";
+import { AboutPage } from "./pages/AboutPage";
 import { HomePage } from "./pages/HomePage";
 import { RegistryPage } from "./pages/RegistryPage";
 import { ResearchPage } from "./pages/ResearchPage";
@@ -31,6 +32,7 @@ export default function App() {
       <main className="app-main">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/session" element={<SessionPage />} />
           <Route path="/audit" element={<AuditPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />

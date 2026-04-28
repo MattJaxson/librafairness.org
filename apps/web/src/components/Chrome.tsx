@@ -61,6 +61,7 @@ export function SectionLabel({ children }: { children: React.ReactNode }) {
 
 const PRIMARY_NAV: ReadonlyArray<readonly [string, string, boolean]> = [
   ["/", "Home", true],
+  ["/about", "About", false],
   ["/community", "Community", false],
   ["/session", "Session", false],
   ["/audit", "Audit", false],
