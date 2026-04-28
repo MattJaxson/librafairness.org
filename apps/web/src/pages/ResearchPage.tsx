@@ -33,11 +33,6 @@ export function ResearchPage() {
         <Window title="Public Review Links">
           <ul className="stack-list">
             <li>
-              <a href="https://librafairness.org" target="_blank" rel="noreferrer">
-                Live static demo
-              </a>
-            </li>
-            <li>
               <a href="https://github.com/MattJaxson/librafairness.org" target="_blank" rel="noreferrer">
                 Static demo source
               </a>
